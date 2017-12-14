@@ -1,5 +1,7 @@
 package com.erp.entity;
 
+import java.util.Date;
+
 public class SysUser {
     private String id;
 
@@ -7,7 +9,13 @@ public class SysUser {
 
     private String password;
 
+    private String email;
+
     private String locked;
+
+    private Date updateTime;
+
+    private Date createTime;
 
     public String getId() {
         return id;
@@ -33,11 +41,35 @@ public class SysUser {
         this.password = password == null ? null : password.trim();
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
     public String getLocked() {
         return locked;
     }
 
     public void setLocked(String locked) {
         this.locked = locked == null ? null : locked.trim();
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
